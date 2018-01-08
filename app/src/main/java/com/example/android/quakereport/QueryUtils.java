@@ -63,10 +63,11 @@ public final class QueryUtils {
                 Date dateObject = new Date(time);
                 SimpleDateFormat dateFormatter = new SimpleDateFormat("MMM DD, yyyy");
                 String dateToDisplay = dateFormatter.format(dateObject);
+                // Extract the value for the key called "url"
+                String url = properties.getString("url");
 
 
-
-                Earthquake earthquake = new Earthquake(magnitude, location, time);
+                Earthquake earthquake = new Earthquake(magnitude, location, time, url);
                 earthquakes.add(earthquake);
             }
 
